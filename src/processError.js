@@ -3,7 +3,7 @@ import Message from './Message'
 import Messages from './Messages'
 import processPasswordError from './processPasswordError'
 
-console.log('processError version 4');
+console.log('processError version 5');
 
 /**
  * Conform Errors to {code, message[, error]} for consistent processing in UI.
