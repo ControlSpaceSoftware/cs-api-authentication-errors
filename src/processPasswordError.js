@@ -13,6 +13,10 @@ export function createPasswordMessage(lookupCode, error) {
 
 export default function processPasswordError(error) {
 
+	if (error.code === 'NotAuthorizedException') {
+		return createPasswordMessage('NotAuthorizedException', error);
+	}
+
 	const message = error.message;
 
 	if (/must\shave\slength\sgreater\sthan/gi.test(message)) {
