@@ -67,7 +67,7 @@ export default function processError(error) {
 		lookupMessage = Messages['UnknownErrorCode'];
 	}
 
-	console.log(JSON.stringify(lookupMessage, null, 4));
+	console.log(JSON.stringify({error, lookupMessage}, null, 4));
 
 	return new Message(lookupMessage.code, lookupMessage.message, error);
 
