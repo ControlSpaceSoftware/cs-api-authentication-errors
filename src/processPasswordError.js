@@ -13,33 +13,25 @@ export function createPasswordMessage(lookupCode, error) {
 
 export default function processPasswordError(error) {
 
-	const PasswordSymbol = /must have symbol characters/gi;
-	const PasswordLength = /must have length greater than/gi;
-	const PasswordNumeric = /must have numeric characters/gi;
-	const PasswordUpperCase = /must have uppercase characters/gi;
-	const PasswordLowerCase = /must have lowercase characters/gi;
-
 	const message = error.message;
 
-	console.log('processPasswordError', PasswordUpperCase, PasswordUpperCase.test(message), 'message', message);
-
-	if (PasswordLength.test(message)) {
+	if (/must\shave\slength\sgreater\sthan/gi.test(message)) {
 		return createPasswordMessage('PasswordLengthValidation', error);
 	}
 
-	if (PasswordNumeric.test(message)) {
+	if (/must\shave\snumeric\scharacters/gi.test(message)) {
 		return createPasswordMessage('PasswordNumericValidation', error);
 	}
 
-	if (PasswordUpperCase.test(message)) {
+	if (/must\shave\suppercase\scharacters/gi.test(message)) {
 		return createPasswordMessage('PasswordUpperCaseValidation', error);
 	}
 
-	if (PasswordSymbol.test(message)) {
+	if (/must\shave\ssymbol\scharacters/gi.test(message)) {
 		return createPasswordMessage('PasswordSymbolValidation', error);
 	}
 
-	if (PasswordLowerCase.test(message)) {
+	if (/must\shave\slowercase\scharacters/gi.test(message)) {
 		return createPasswordMessage('PasswordLowerCaseValidation', error);
 	}
 
