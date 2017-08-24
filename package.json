@@ -1,6 +1,6 @@
 {
 	"name": "cs-api-authentication-errors",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "authentication error message processing",
 	"main": "index.js",
 	"scripts": {
