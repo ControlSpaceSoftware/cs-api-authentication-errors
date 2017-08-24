@@ -59,6 +59,9 @@ export default function processError(error) {
 		}
 	}
 
+	console.log('isPassword', isPassword);
+	console.log('lookupCode', lookupCode);
+
 	lookupCode = lookupCode || code;
 
 	if (Messages[lookupCode]) {
