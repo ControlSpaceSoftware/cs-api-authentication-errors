@@ -8,7 +8,9 @@ const PasswordLength = /must have length greater than or equal to ([0-9]+)/gi;
 const PasswordNumeric = /must have numeric characters/gi;
 const PasswordUpperCase = /must have uppercase characters/gi;
 const PasswordLowerCase = /must have lowercase characters/gi;
-console.log('processError version 1');
+
+console.log('processError version 2');
+
 /**
  * Conform Errors to {code, message[, error]} for consistent processing in UI.
  *
