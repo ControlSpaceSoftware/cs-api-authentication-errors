@@ -42,26 +42,20 @@ export default function processError(error) {
 	if (isPassword) {
 		//{"__type":"InvalidPasswordException","message":"Password does not conform to policy: Password not long enough"}
 		//{"__type":"InvalidParameterException","message":"1 validation error detected: Value at 'password' failed to satisfy constraint: Member must have length greater than or equal to 6"}
-		switch (code) {
-			case 'InvalidParameterException':
-			case 'InvalidPasswordException':
-				if (PasswordLength.test(message)) {
-					lookupCode = 'PasswordLengthValidation';
-				} else
-				if (PasswordNumeric.test(message)) {
-					lookupCode = 'PasswordNumericValidation';
-				} else
-				if (PasswordUpperCase.test(message)) {
-					lookupCode = 'PasswordUpperCaseValidation';
-				} else
-				if (PasswordSymbol.test(message)) {
-					lookupCode = 'PasswordSymbolValidation';
-				} else
-				if (PasswordLowerCase.test(message)) {
-					lookupCode = 'PasswordLowerCaseValidation';
-				}
-				break;
-			default:
+		if (PasswordLength.test(message)) {
+			lookupCode = 'PasswordLengthValidation';
+		} else
+		if (PasswordNumeric.test(message)) {
+			lookupCode = 'PasswordNumericValidation';
+		} else
+		if (PasswordUpperCase.test(message)) {
+			lookupCode = 'PasswordUpperCaseValidation';
+		} else
+		if (PasswordSymbol.test(message)) {
+			lookupCode = 'PasswordSymbolValidation';
+		} else
+		if (PasswordLowerCase.test(message)) {
+			lookupCode = 'PasswordLowerCaseValidation';
 		}
 	}
 
