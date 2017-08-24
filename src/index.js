@@ -4,3 +4,4 @@ export { default as UserInputValidationMessages } from './UserInputValidationMes
 export { default as MESSAGES } from './Messages'
 export { default as processError } from './processError'
 export { default as validateUserInput } from './validateUserInput'
+export { default as processPasswordError } from './processPasswordError'

@@ -252,5 +252,6 @@ export default {
 		"code": "UserInputMissingCode"
 	},
 	"UserInputMissingPassword": {"message": "Your account password is required.", "code": "UserInputMissingPassword"},
-	"UserInputMissingNewPassword": {"message": "A new password is required.", "code": "UserInputMissingNewPassword"}
+	"UserInputMissingNewPassword": {"message": "A new password is required.", "code": "UserInputMissingNewPassword"},
+	"UnknownPasswordValidation": {"message": "There is an issue with password.", "code": "UnknownPasswordValidation"}
 };
