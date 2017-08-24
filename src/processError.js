@@ -44,6 +44,9 @@ export default function processError(error) {
 	if (isPassword) {
 		//{"__type":"InvalidPasswordException","message":"Password does not conform to policy: Password not long enough"}
 		//{"__type":"InvalidParameterException","message":"1 validation error detected: Value at 'password' failed to satisfy constraint: Member must have length greater than or equal to 6"}
+
+		console.log('PasswordUpperCase', PasswordUpperCase, 'message', message);
+
 		if (PasswordLength.test(message)) {
 			lookupCode = 'PasswordLengthValidation';
 		} else
