@@ -2,7 +2,7 @@
 
 import chai from 'chai'
 import sinonChai from 'sinon-chai'
-import { validateUserInput, UserInputValidationMessages } from '../src'
+import { validateUserInput, UserInputValidationMessages, processError } from '../src'
 
 chai.should();
 chai.use(sinonChai);
@@ -43,3 +43,7 @@ describe('validateUserInput', () => {
 		expect(validateUserInput(['name'], userInput)).to.eql(expected);
 	});
 });
+
+const error = {code: 'InternalFailure', message: 'some server message'};
+const message = processError(error);
+console.log(JSON.stringify(message, null, 5));
