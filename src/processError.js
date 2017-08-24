@@ -2,7 +2,7 @@
 import Message from './Message'
 import Messages from './Messages'
 
-const Password = /\w?password\w?/gi;
+const Password = /password/gi;
 const PasswordSymbol = /must have symbol characters/g;
 const PasswordLength = /must have length greater than or equal to ([0-9]+)/g;
 const PasswordNumeric = /must have numeric characters/g;
@@ -37,7 +37,7 @@ export default function processError(error) {
 
 	const code = error.code;
 	const message = error.message;
-	const isPassword = Password.test(error.message);
+	const isPassword = Password.test(message);
 
 	if (isPassword) {
 		//{"__type":"InvalidPasswordException","message":"Password does not conform to policy: Password not long enough"}
