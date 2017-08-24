@@ -29,7 +29,7 @@ export default function validateUserInput(requiredFields = [], userInput) {
 		if (message) {
 			if (typeof userInput !== 'object') {
 				return new Message(message.code, message.message, {field});
-			} else if (userInput.hasOwnProperty(field)) {
+			} else if (!userInput.hasOwnProperty(field)) {
 				return new Message(message.code, message.message, {field});
 			} else {
 				const value = userInput[field];
