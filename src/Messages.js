@@ -136,7 +136,7 @@ export default {
 		"code": "LimitExceededException"
 	},
 	"NotAuthorizedException": {
-		"message": "Invalid email or password.",
+		"message": "The password you provided is not valid. Check your email address and password.",
 		"statusCode": "400",
 		"code": "NotAuthorizedException"
 	},
