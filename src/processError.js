@@ -3,12 +3,12 @@ import Message from './Message'
 import Messages from './Messages'
 
 const Password = /password/gi;
-const PasswordSymbol = /must have symbol characters/g;
-const PasswordLength = /must have length greater than or equal to ([0-9]+)/g;
-const PasswordNumeric = /must have numeric characters/g;
-const PasswordUpperCase = /must have uppercase characters/g;
-const PasswordLowerCase = /must have lowercase characters/g;
-
+const PasswordSymbol = /must have symbol characters/gi;
+const PasswordLength = /must have length greater than or equal to ([0-9]+)/gi;
+const PasswordNumeric = /must have numeric characters/gi;
+const PasswordUpperCase = /must have uppercase characters/gi;
+const PasswordLowerCase = /must have lowercase characters/gi;
+console.log('processError version 1');
 /**
  * Conform Errors to {code, message[, error]} for consistent processing in UI.
  *
