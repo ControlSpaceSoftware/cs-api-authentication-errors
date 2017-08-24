@@ -9,7 +9,7 @@ const PasswordNumeric = /must have numeric characters/gi;
 const PasswordUpperCase = /must have uppercase characters/gi;
 const PasswordLowerCase = /must have lowercase characters/gi;
 
-console.log('processError version 2');
+console.log('processError version 3');
 
 /**
  * Conform Errors to {code, message[, error]} for consistent processing in UI.
