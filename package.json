@@ -2,7 +2,7 @@
 	"name": "cs-api-authentication-errors",
 	"version": "1.0.4",
 	"description": "authentication error message processing",
-	"main": "index.js",
+	"main": "lib/index.js",
 	"scripts": {
 		"help": "build-scripts help",
 		"scripts": "build-scripts scripts",
