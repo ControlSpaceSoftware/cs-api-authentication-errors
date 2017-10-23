@@ -1,9 +1,9 @@
 import Message from './Message'
 import UserInputValidationMessages from './UserInputValidationMessages'
 import MESSAGES from './Messages'
-import camelCase from 'lodash/string/camelCase'
-import startCase from 'lodash/string/startCase'
-import isArray from 'lodash/lang/isArray'
+import camelCase from 'lodash.camelcase'
+import startCase from 'lodash.startcase'
+import isArray from 'lodash.isarray'
 
 const titleCase = (text = '') => startCase(camelCase(text)).replace(/\s/g, '');
 
